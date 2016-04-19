@@ -1,0 +1,62 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\begin{document}
+\title{RecSys Challenge 2016}
+\author{Sumit Sidana}
+\date{\today}
+\maketitle
+\section{Most Popular Approach}
+
+\begin{algorithm}
+\caption{Evaluation Using Mean Squared Error}
+% \label{alg:tmatam}
+\begin{algorithmic}[1] 
+\State Filter out columns which have ``Interaction type = 4''
+\State Change all the interaction types to ``1'' columns which have
+\State group by $item_{id}$ and reverse sort
+\end{algorithmic}
+\end{algorithm}
+Score: 43278.55
+
+\section{Matrix Factorization Using ALS of SPARK}
+\begin{itemize}
+ \item Number of Latent features in both items and users: 10
+ \item Number of iterations: 10
+ \item Score is Surpisingly low:  15550.28
+\end{itemize}
+
+\section{One interesting observation}
+Field by the name: ``active\_during\_test''
+It is waste to recommend those items which have ''active\_during\_test = 0`` because the items are no longer active during the test week. But does that mean we don't train on them and drop 
+them? Nope because score further drops down (I checked!). So it is important to train on them because they give us important signals about users but while testing we do not test on them.
+
+
+\section{Matrix Factorization in Python3 using SGD}
+\begin{itemize}
+\item Again number of latent features in both items and users: 10
+\item Learning rate of sgd: 0.0005
+\item No regularization
+\item But taking care of our observation
+ \item Still running on Tiger
+\end{itemize}
+
+ \section{Next Immidiate Step}
+ \begin{itemize}
+  \item Spark: again with the interesting observation
+ \end{itemize}
+
+ \section{Further Ideas}
+ \begin{itemize}
+  \item Cross Validation
+  \item Increase number of iterations, Increase number of latent factors
+  \item Normalize rating between 1 and 5
+  \item Regularization
+  \item Hybridize between matrix factorization and content fitering and popularity
+  \item Weighting the interactions
+ \end{itemize}
+
+% \end{itemize}
+\end{document}
