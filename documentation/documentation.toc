@@ -1,5 +1,0 @@
-\beamer@endinputifotherversion {3.24pt}
-\beamer@sectionintoc {1}{Most Popular Approach}{2}{0}{1}
-\beamer@sectionintoc {2}{Matrix Factorizatin Using ALS of SPARK}{2}{0}{2}
-\beamer@sectionintoc {3}{Matrix Factorization in Python3 using SGD}{2}{0}{3}
-\beamer@sectionintoc {4}{One interesting observation}{2}{0}{4}
