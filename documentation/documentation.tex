@@ -28,6 +28,22 @@ Score: 43278.55
  \item Score is Surpisingly low:  15550.28
 \end{itemize}
 
+\section{Matrix Factorization Using ALS of SPARK}
+\begin{itemize}
+ \item Number of Latent features in both items and users: 100
+ \item Number of iterations: 100
+ \item Number of predicted items for each user: 100
+ \item Score:  25429.54.28
+ \item This can serve as matrix-factorization baseline
+ \item FileName: als\_v2
+ \item Pro's:
+ \begin{itemize}
+ \item Can now combine this along with interesting observation
+ \item Can now combine this along with content based approach
+ \end{itemize}
+ 
+\end{itemize}
+
 \section{One interesting observation}
 Field by the name: ``active\_during\_test''
 It is waste to recommend those items which have ''active\_during\_test = 0`` because the items are no longer active during the test week. But does that mean we don't train on them and drop 
@@ -40,8 +56,13 @@ them? Nope because score further drops down (I checked!). So it is important to 
 \item Learning rate of sgd: 0.0005
 \item No regularization
 \item But taking care of our observation
- \item Still running on Tiger
+ \item Number of Latent features in both items and users: 10
+ \item Number of iterations: 10 
+ \item Score: 14808.21
+ \item Surprisingly, all predicted items were same, some bug?
 \end{itemize}
+
+
 
  \section{Next Immidiate Step}
  \begin{itemize}
