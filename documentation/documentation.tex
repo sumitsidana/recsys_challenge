@@ -31,11 +31,11 @@ Score: 43278.55
 \section{Matrix Factorization Using ALS of SPARK}
 \begin{itemize}
  \item Number of Latent features in both items and users: 100
- \item Number of iterations: 100
+ \item Number of iterations: 20
  \item Number of predicted items for each user: 100
  \item Score:  25429.54.28
  \item This can serve as matrix-factorization baseline
- \item FileName: als\_v2
+ \item FileName: als\_v2.txt
  \item Pro's:
  \begin{itemize}
  \item Can now combine this along with interesting observation
@@ -43,6 +43,47 @@ Score: 43278.55
  \end{itemize}
  
 \end{itemize}
+
+\section{Matrix Factorization Using ALS of SPARK}
+
+\begin{itemize}
+ \item Number of Latent features in both items and users: 100
+ \item Number of iterations: 100
+ \item Number of predicted items for each user: 100
+ \item Combined with interesting observation
+ \item Score:  38646.14
+ \item This can serve as matrix-factorization baseline
+ \item FileName: als\_v2\_1
+ \item Pro's:
+ \begin{itemize}
+ \item Can now combine this along with content based approach after predicting 1000 items
+ \end{itemize}
+ 
+\end{itemize}
+
+\section{Popularity meets Activeness: Our best score so far}
+\begin{itemize}
+ \item Score: 73253.63
+ \end{itemize}
+ 
+
+
+\begin{itemize}
+ \item Number of Latent features in both items and users: 100
+ \item Number of iterations: 100
+ \item Number of predicted items for each user: 100
+ \item Combined with interesting observation
+ \item Score:  38646.14
+ \item This can serve as matrix-factorization baseline
+ \item FileName: als\_v2
+ \item Pro's:
+ \begin{itemize}
+ \item Can now combine this along with content based approach after predicting 1000 items
+ \end{itemize}
+ 
+\end{itemize}
+
+
 
 \section{One interesting observation}
 Field by the name: ``active\_during\_test''
