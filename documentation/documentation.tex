@@ -8,6 +8,10 @@
 \author{Sumit Sidana}
 \date{\today}
 \maketitle
+\section{One interesting observation}
+Field by the name: ``active\_during\_test''
+It is waste to recommend those items which have ''active\_during\_test = 0`` because the items are no longer active during the test week. But does that mean we don't train on them and drop 
+them? Nope because score further drops down (I checked!). So it is important to train on them because they give us important signals about users but while testing we do not test on them.
 \section{Most Popular Approach}
 
 \begin{algorithm}
@@ -21,6 +25,14 @@
 \end{algorithm}
 Score: 43278.55
 
+\section{Active Popular Items}
+\begin{itemize}
+ \item Again take 30 most popular items
+ \item But this time take active\_during\_test = 1 into account
+ \item For each user predict 30 most popular active items
+ \item Score: 73253.63 	
+\end{itemize}
+
 \section{Matrix Factorization Using ALS of SPARK}
 \begin{itemize}
  \item Number of Latent features in both items and users: 10
@@ -31,14 +43,14 @@ Score: 43278.55
 \section{Matrix Factorization Using ALS of SPARK}
 \begin{itemize}
  \item Number of Latent features in both items and users: 100
- \item Number of iterations: 20
+ \item Number of iterations: 100
  \item Number of predicted items for each user: 100
  \item Score:  25429.54.28
+ \item Score (active): 38646.14
  \item This can serve as matrix-factorization baseline
- \item FileName: als\_v2.txt
+ \item FileName: als\_v2
  \item Pro's:
  \begin{itemize}
- \item Can now combine this along with interesting observation
  \item Can now combine this along with content based approach
  \end{itemize}
  
@@ -61,19 +73,6 @@ Score: 43278.55
  
 \end{itemize}
 
-\section{Popularity meets Activeness: Our best score so far}
-\begin{itemize}
- \item Score: 73253.63
- \end{itemize}
-
-
-
-\section{One interesting observation}
-Field by the name: ``active\_during\_test''
-It is waste to recommend those items which have ''active\_during\_test = 0`` because the items are no longer active during the test week. But does that mean we don't train on them and drop 
-them? Nope because score further drops down (I checked!). So it is important to train on them because they give us important signals about users but while testing we do not test on them.
-
-
 \section{Matrix Factorization in Python3 using SGD}
 \begin{itemize}
 \item Again number of latent features in both items and users: 10
@@ -87,11 +86,14 @@ them? Nope because score further drops down (I checked!). So it is important to 
 \end{itemize}
 
 
-
- \section{Next Immidiate Step}
- \begin{itemize}
-  \item Spark: again with the interesting observation
- \end{itemize}
+\section{Personalized Activeness Popularity}
+\begin{itemize}
+ \item Sort items by taking into account users's past interactions
+ \item Recommend by sorting into descending order
+ \item Take into account active\_during\_test = 1
+ \item Recommend at least 30 items by completing the list on the basis of popularity
+ \item Score: 287524.88
+\end{itemize}
 
  \section{Further Ideas}
  \begin{itemize}
