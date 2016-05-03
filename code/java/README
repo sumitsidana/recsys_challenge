@@ -1,0 +1,8 @@
+***    user_past_experience.csv is written by a spark program    ***
+
+GroupInteractionByUserItem.java /home/ama/sidana/recommendersystemchallenge/output/user_past_experience.csv /home/ama/sidana/recommendersystemchallenge/output/userInteractions.csv
+
+TargetUsersPastInteractions.java  /home/ama/sidana/recommendersystemchallenge/output/userInteractions.csv /home/ama/sidana/recommendersystemchallenge/data/target_users.csv /home/ama/sidana/recommendersystemchallenge/output/personalized_popularity.csv
+
+ActivePersonalizedPopularity.java /home/ama/sidana/recommendersystemchallenge/data/data/items.csv /home/ama/sidana/recommendersystemchallenge/output/personalized_popularity.csv /home/ama/sidana/recommendersystemchallenge/output/activepersonalizedpopularity.txt
+
