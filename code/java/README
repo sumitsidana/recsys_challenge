@@ -6,3 +6,14 @@ TargetUsersPastInteractions.java  /home/ama/sidana/recommendersystemchallenge/ou
 
 ActivePersonalizedPopularity.java /home/ama/sidana/recommendersystemchallenge/data/data/items.csv /home/ama/sidana/recommendersystemchallenge/output/personalized_popularity.csv /home/ama/sidana/recommendersystemchallenge/output/activepersonalizedpopularity.txt
 
+TargetUserPast.java	/home/ama/sidana/recommendersystemchallenge/data/data/items.csv /home/ama/sidana/recommendersystemchallenge/output/personalized_popularity.csv /home/ama/sidana/recommendersystemchallenge/output/user_past_experience_ver1.csv
+
+UserItemSimilarity.java	/home/ama/sidana/recommendersystemchallenge/data/data/users.csv /home/ama/sidana/recommendersystemchallenge/data/data/items.csv /home/ama/sidana/recommendersystemchallenge/output/topactiveitems.txt /home/ama/sidana/recommendersystemchallenge/data/target_users.csv /home/ama/sidana/recommendersystemchallenge/output/user_top_active_items_ver_1 
+
+decreaseItem.java	/home/ama/sidana/recommendersystemchallenge/output/als_v2_backup.txt
+
+MergeCFActiveItems.java /home/ama/sidana/recommendersystemchallenge/data/data/items.csv /home/ama/sidana/recommendersystemchallenge/output/als_v2_backup.txt
+
+cfSGDPostProcessOutput.java	/home/ama/sidana/recommendersystemchallenge/output/sgd
+
+writeOrderTargetUsers.java	/home/ama/sidana/recommendersystemchallenge/output/cf_sgd
