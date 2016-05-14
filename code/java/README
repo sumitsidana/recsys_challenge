@@ -17,3 +17,24 @@ MergeCFActiveItems.java /home/ama/sidana/recommendersystemchallenge/data/data/it
 cfSGDPostProcessOutput.java	/home/ama/sidana/recommendersystemchallenge/output/sgd
 
 writeOrderTargetUsers.java	/home/ama/sidana/recommendersystemchallenge/output/cf_sgd
+
+ActivePersonalizedSimilarityPopularity.java	/home/ama/sidana/recommendersystemchallenge/data/data/items.csv /home/ama/sidana/recommendersystemchallenge/output/user_past_experience_ver1.csv /home/ama/sidana/recommendersystemchallenge/output/user_top_k_active_items_ver_1 /home/ama/sidana/recommendersystemchallenge/output/activepersonalizedsimilaritypopularity.txt
+
+UserItemSimilarity_backup.java /home/ama/sidana/recommendersystemchallenge/data/data/users.csv /home/ama/sidana/recommendersystemchallenge/data/data/items.csv /home/ama/sidana/recommendersystemchallenge/output/topactiveitems.txt /home/ama/sidana/recommendersystemchallenge/data/target_users.csv /home/ama/sidana/recommendersystemchallenge/output/user_top_active_items_ver_3
+
+UserItemSimilarity.java /home/ama/sidana/recommendersystemchallenge/data/data/users.csv /home/ama/sidana/recommendersystemchallenge/data/data/items.csv /home/ama/sidana/recommendersystemchallenge/output/topactiveitems.txt /home/ama/sidana/recommendersystemchallenge/data/target_users.csv /home/ama/sidana/recommendersystemchallenge/output/user_top_active_items_ver_2
+
+UserItemSimilarity_backup_backup.java /home/ama/sidana/recommendersystemchallenge/data/data/users.csv /home/ama/sidana/recommendersystemchallenge/data/data/items.csv /home/ama/sidana/recommendersystemchallenge/output/topactiveitems.txt /home/ama/sidana/recommendersystemchallenge/data/target_users.csv /home/ama/sidana/recommendersystemchallenge/output/user_top_active_items_ver_4
+
+UserItemSimilarity_backup_backup_backup.java /home/ama/sidana/recommendersystemchallenge/data/data/users.csv /home/ama/sidana/recommendersystemchallenge/data/data/items.csv /home/ama/sidana/recommendersystemchallenge/output/topactiveitems.txt /home/ama/sidana/recommendersystemchallenge/data/target_users.csv /home/ama/sidana/recommendersystemchallenge/output/user_top_active_items_ver_5
+
+SegregateNewUsers.java ../output/user_past_experience_ver1.csv ../output/newusers
+
+UsersAttributes.java ../data/data/users.csv ../output/oldusers ../output/oldusersattributes
+
+UsersAttributes.java ../data/data/users.csv ../output/newusers ../output/newusersattributes
+
+java -cp . NewUser_OldUser_Similarity  ../output/oldusersattributes ../output/newusersattributes ../output/old_similar_new
+
+java -cp . NewOldSimilarActiveItems ../data/data/items.csv ../data/data/interactions.csv ../output/old_similar_new ../output/new_active_items
+
