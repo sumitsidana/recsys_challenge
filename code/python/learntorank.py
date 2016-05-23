@@ -4,7 +4,7 @@ mem = Memory("./mycache")
 
 @mem.cache
 def get_data():
-    data = load_svmlight_file("/home/ama/sidana/recommendersystemchallenge/output/input.similarity")
+    data = load_svmlight_file("/home/sumit/recommendersystemchallenge/data/output/input.similarity")
     return data[0], data[1]
 
 X, y = get_data()
